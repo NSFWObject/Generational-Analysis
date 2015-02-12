@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		5C7EADA81A8C46E8001438E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADA71A8C46E8001438E2 /* main.m */; };
 		5C7EADAB1A8C46E8001438E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADAA1A8C46E8001438E2 /* AppDelegate.m */; };
-		5C7EADAE1A8C46E8001438E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADAD1A8C46E8001438E2 /* ViewController.m */; };
 		5C7EADB11A8C46E8001438E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7EADAF1A8C46E8001438E2 /* Main.storyboard */; };
 		5C7EADB31A8C46E8001438E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7EADB21A8C46E8001438E2 /* Images.xcassets */; };
 		5C7EADB61A8C46E8001438E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7EADB41A8C46E8001438E2 /* LaunchScreen.xib */; };
-		5C7EADC21A8C46E8001438E2 /* LeaksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADC11A8C46E8001438E2 /* LeaksTests.m */; };
+		5C7EADD01A8C4F57001438E2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADCF1A8C4F57001438E2 /* RootViewController.m */; };
+		5C7EADD81A8CB605001438E2 /* LeaksInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADD21A8C7430001438E2 /* LeaksInstrument.m */; };
+		5C7EADD91A8CB605001438E2 /* LeaksInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADD61A8C7591001438E2 /* LeaksInspector.m */; };
+		5C7EADDB1A8CCCD2001438E2 /* LeaksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADDA1A8CCCD2001438E2 /* LeaksTests.m */; };
+		5C7EADDE1A8CCD74001438E2 /* LeakingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADDD1A8CCD74001438E2 /* LeakingViewController.m */; };
+		5C7EADE11A8CCDDA001438E2 /* NotLeakingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADE01A8CCDDA001438E2 /* NotLeakingViewController.m */; };
+		5C7EADE51A8CED87001438E2 /* LeaksInspectorContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADE41A8CED87001438E2 /* LeaksInspectorContext.m */; };
+		5C7EADEB1A8CF25C001438E2 /* LeaksSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7EADEA1A8CF25C001438E2 /* LeaksSession.m */; };
+		8D7CF5E4EA9B8591CA6AE344 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +39,27 @@
 		5C7EADA71A8C46E8001438E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5C7EADA91A8C46E8001438E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5C7EADAA1A8C46E8001438E2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5C7EADAC1A8C46E8001438E2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5C7EADAD1A8C46E8001438E2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5C7EADB01A8C46E8001438E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C7EADB21A8C46E8001438E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5C7EADB51A8C46E8001438E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5C7EADBB1A8C46E8001438E2 /* LeaksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeaksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7EADC01A8C46E8001438E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C7EADC11A8C46E8001438E2 /* LeaksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeaksTests.m; sourceTree = "<group>"; };
+		5C7EADCE1A8C4F57001438E2 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		5C7EADCF1A8C4F57001438E2 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		5C7EADD11A8C7430001438E2 /* LeaksInstrument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaksInstrument.h; sourceTree = "<group>"; };
+		5C7EADD21A8C7430001438E2 /* LeaksInstrument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaksInstrument.m; sourceTree = "<group>"; };
+		5C7EADD51A8C7591001438E2 /* LeaksInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaksInspector.h; sourceTree = "<group>"; };
+		5C7EADD61A8C7591001438E2 /* LeaksInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaksInspector.m; sourceTree = "<group>"; };
+		5C7EADDA1A8CCCD2001438E2 /* LeaksTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaksTests.m; sourceTree = "<group>"; };
+		5C7EADDC1A8CCD74001438E2 /* LeakingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakingViewController.h; sourceTree = "<group>"; };
+		5C7EADDD1A8CCD74001438E2 /* LeakingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakingViewController.m; sourceTree = "<group>"; };
+		5C7EADDF1A8CCDDA001438E2 /* NotLeakingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotLeakingViewController.h; sourceTree = "<group>"; };
+		5C7EADE01A8CCDDA001438E2 /* NotLeakingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotLeakingViewController.m; sourceTree = "<group>"; };
+		5C7EADE31A8CED87001438E2 /* LeaksInspectorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaksInspectorContext.h; sourceTree = "<group>"; };
+		5C7EADE41A8CED87001438E2 /* LeaksInspectorContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaksInspectorContext.m; sourceTree = "<group>"; };
+		5C7EADE61A8CEDF0001438E2 /* LeaksInspectorTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaksInspectorTypes.h; sourceTree = "<group>"; };
+		5C7EADE91A8CF25C001438E2 /* LeaksSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaksSession.h; sourceTree = "<group>"; };
+		5C7EADEA1A8CF25C001438E2 /* LeaksSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaksSession.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D7CF5E4EA9B8591CA6AE344 /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +87,7 @@
 				5C7EADA41A8C46E8001438E2 /* Leaks */,
 				5C7EADBE1A8C46E8001438E2 /* LeaksTests */,
 				5C7EADA31A8C46E8001438E2 /* Products */,
+				6DB1B36F60AF1815565AA5A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,8 +105,13 @@
 			children = (
 				5C7EADA91A8C46E8001438E2 /* AppDelegate.h */,
 				5C7EADAA1A8C46E8001438E2 /* AppDelegate.m */,
-				5C7EADAC1A8C46E8001438E2 /* ViewController.h */,
-				5C7EADAD1A8C46E8001438E2 /* ViewController.m */,
+				5C7EADCE1A8C4F57001438E2 /* RootViewController.h */,
+				5C7EADCF1A8C4F57001438E2 /* RootViewController.m */,
+				5C7EADDC1A8CCD74001438E2 /* LeakingViewController.h */,
+				5C7EADDD1A8CCD74001438E2 /* LeakingViewController.m */,
+				5C7EADDF1A8CCDDA001438E2 /* NotLeakingViewController.h */,
+				5C7EADE01A8CCDDA001438E2 /* NotLeakingViewController.m */,
+				5C7EADD41A8C757D001438E2 /* Instrument */,
 				5C7EADAF1A8C46E8001438E2 /* Main.storyboard */,
 				5C7EADB21A8C46E8001438E2 /* Images.xcassets */,
 				5C7EADB41A8C46E8001438E2 /* LaunchScreen.xib */,
@@ -105,7 +132,7 @@
 		5C7EADBE1A8C46E8001438E2 /* LeaksTests */ = {
 			isa = PBXGroup;
 			children = (
-				5C7EADC11A8C46E8001438E2 /* LeaksTests.m */,
+				5C7EADDA1A8CCCD2001438E2 /* LeaksTests.m */,
 				5C7EADBF1A8C46E8001438E2 /* Supporting Files */,
 			);
 			path = LeaksTests;
@@ -117,6 +144,37 @@
 				5C7EADC01A8C46E8001438E2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C7EADD41A8C757D001438E2 /* Instrument */ = {
+			isa = PBXGroup;
+			children = (
+				5C7EADE61A8CEDF0001438E2 /* LeaksInspectorTypes.h */,
+				5C7EADE21A8CED65001438E2 /* Internals */,
+				5C7EADD11A8C7430001438E2 /* LeaksInstrument.h */,
+				5C7EADD21A8C7430001438E2 /* LeaksInstrument.m */,
+				5C7EADE91A8CF25C001438E2 /* LeaksSession.h */,
+				5C7EADEA1A8CF25C001438E2 /* LeaksSession.m */,
+				5C7EADD51A8C7591001438E2 /* LeaksInspector.h */,
+				5C7EADD61A8C7591001438E2 /* LeaksInspector.m */,
+			);
+			name = Instrument;
+			sourceTree = "<group>";
+		};
+		5C7EADE21A8CED65001438E2 /* Internals */ = {
+			isa = PBXGroup;
+			children = (
+				5C7EADE31A8CED87001438E2 /* LeaksInspectorContext.h */,
+				5C7EADE41A8CED87001438E2 /* LeaksInspectorContext.m */,
+			);
+			name = Internals;
+			sourceTree = "<group>";
+		};
+		6DB1B36F60AF1815565AA5A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C7EADAE1A8C46E8001438E2 /* ViewController.m in Sources */,
 				5C7EADAB1A8C46E8001438E2 /* AppDelegate.m in Sources */,
+				5C7EADE51A8CED87001438E2 /* LeaksInspectorContext.m in Sources */,
 				5C7EADA81A8C46E8001438E2 /* main.m in Sources */,
+				5C7EADD81A8CB605001438E2 /* LeaksInstrument.m in Sources */,
+				5C7EADDE1A8CCD74001438E2 /* LeakingViewController.m in Sources */,
+				5C7EADEB1A8CF25C001438E2 /* LeaksSession.m in Sources */,
+				5C7EADD01A8C4F57001438E2 /* RootViewController.m in Sources */,
+				5C7EADE11A8CCDDA001438E2 /* NotLeakingViewController.m in Sources */,
+				5C7EADD91A8CB605001438E2 /* LeaksInspector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C7EADC21A8C46E8001438E2 /* LeaksTests.m in Sources */,
+				5C7EADDB1A8CCCD2001438E2 /* LeaksTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +478,7 @@
 				5C7EADC71A8C46E8001438E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C7EADC81A8C46E8001438E2 /* Build configuration list for PBXNativeTarget "LeaksTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +487,7 @@
 				5C7EADCA1A8C46E8001438E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
