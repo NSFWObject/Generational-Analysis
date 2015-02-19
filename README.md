@@ -6,6 +6,6 @@ All the interesting stuff is in the `LeaksTests` folder, `LeaksTests.m`.
 
 Your feedback is greatly appreciated:
 
-Create an issue
-Open a pull-request
-Hit me on twitter: @zats
+* Create an issue
+* Open a pull-request
+* Hit me on twitter: [@zats](https://twitter.com/zats)
