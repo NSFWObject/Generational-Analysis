@@ -40,7 +40,7 @@
     [self _pushPopViewControllerNTimes:4 leak:YES progressHandler:^{
         [self.leaksInstrument measure];
     } completionHandler:^{
-        XCTAssertFalse(self.leaksInstrument.hasLeaksInRepresentativeSession, @"%@", self.leaksInstrument);
+        XCTAssertTrue(self.leaksInstrument.hasLeaksInRepresentativeSession, @"%@", self.leaksInstrument);
         [leaksExpectation fulfill];
     }];
     
