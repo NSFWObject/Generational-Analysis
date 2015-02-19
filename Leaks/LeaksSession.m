@@ -7,6 +7,8 @@
 //
 
 #import "LeaksSession.h"
+#import "LeaksSession+Private.h"
+
 
 @implementation LeaksSession
 

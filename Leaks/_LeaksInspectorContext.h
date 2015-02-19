@@ -17,11 +17,13 @@ typedef NS_ENUM(NSInteger, LeaksInspectorType) {
 };
 
 
-@interface LeaksInspectorContext : NSObject
+@interface _LeaksInspectorContext : NSObject
+
 + (instancetype)contextForEnumerationWithBlock:(leaks_inspector_enumeration_t)block;
 + (instancetype)contextForAllResultsWithOptions:(NSPointerFunctionsOptions)options;
 @property (nonatomic, readonly) NSHashTable *results;
 @property (nonatomic, copy, readonly) leaks_inspector_enumeration_t block;
 @property (nonatomic) BOOL stop;
 @property (nonatomic, readonly) LeaksInspectorType type;
+
 @end

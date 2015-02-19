@@ -14,7 +14,7 @@
 
 
 @interface LeaksTests : XCTestCase
-@property (nonatomic) LeaksInstrument *instrument;
+@property (nonatomic) LeaksInstrument *leaksInstrument;
 @end
 
 
@@ -23,13 +23,13 @@
 - (void)setUp {
     [super setUp];
     
-    self.instrument = [[LeaksInstrument alloc] init];
+    self.leaksInstrument = [[LeaksInstrument alloc] init];
 }
 
 - (void)tearDown {
     // to make sure we are not holding leaked instances from the previous test.
     // Not that it matter if you use -[LeaksInstrument representativeSessions]
-    self.instrument = nil;
+    self.leaksInstrument = nil;
  
     [super tearDown];
 }
@@ -38,12 +38,12 @@
     XCTestExpectation *leaksExpectation = [self expectationWithDescription:@"No leaks detected"];
     
     [self _pushPopViewControllerNTimes:4 leak:YES progressHandler:^{
-        [self.instrument measure];
+        [self.leaksInstrument measure];
     } completionHandler:^{
-        XCTAssertFalse(self.instrument.hasLeaksInRepresentativeSession, @"%@", [self.instrument.representativeSessions componentsJoinedByString:@"\n"]);
+        XCTAssertFalse(self.leaksInstrument.hasLeaksInRepresentativeSession, @"%@", self.leaksInstrument);
         [leaksExpectation fulfill];
     }];
-
+    
     [self waitForExpectationsWithTimeout:10 handler:nil];
 }
 
@@ -51,9 +51,9 @@
     XCTestExpectation *leaksExpectation = [self expectationWithDescription:@"No leaks detected"];
     
     [self _pushPopViewControllerNTimes:4 leak:NO progressHandler:^{
-        [self.instrument measure];
+        [self.leaksInstrument measure];
     } completionHandler:^{
-        XCTAssertFalse(self.instrument.hasLeaksInRepresentativeSession, @"%@", [self.instrument.representativeSessions componentsJoinedByString:@"\n"]);
+        XCTAssertFalse(self.leaksInstrument.hasLeaksInRepresentativeSession, @"%@", [self.leaksInstrument.representativeSessions componentsJoinedByString:@"\n"]);
         [leaksExpectation fulfill];
     }];
     

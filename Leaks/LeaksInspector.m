@@ -8,7 +8,7 @@
 
 #import "LeaksInspector.h"
 
-#import "LeaksInspectorContext.h"
+#import "_LeaksInspectorContext.h"
 
 #include <objc/objc-api.h>
 #include <objc/runtime.h>
@@ -132,7 +132,7 @@ static size_t _IIBeagleSizeRoundedToNearestMallocRangeAllocationSize(size_t size
 }
 
 static void _IIZoneIntrospectionEnumeratorFindInstancesCallback(task_t task, void *baton, unsigned type, vm_range_t *ranges, unsigned count) {
-    LeaksInspectorContext *context = (__bridge LeaksInspectorContext *)baton;
+    _LeaksInspectorContext *context = (__bridge _LeaksInspectorContext *)baton;
     if (context.stop){
         return;
     }
@@ -215,11 +215,11 @@ void _IIBeagleFindInstancesOfClassWithOptionsInternal(leaks_inspector_enumeratio
     NSCAssert(error == KERN_SUCCESS, @"[RHBeagle] Error: malloc_get_all_zones failed.");
     
     //create our context object
-    LeaksInspectorContext *context;
+    _LeaksInspectorContext *context;
     if (block) {
-        context = [LeaksInspectorContext contextForEnumerationWithBlock:block];
+        context = [_LeaksInspectorContext contextForEnumerationWithBlock:block];
     } else if (results) {
-        context = [LeaksInspectorContext contextForAllResultsWithOptions:options];
+        context = [_LeaksInspectorContext contextForAllResultsWithOptions:options];
     }
     
     for (unsigned i = 0; i < count; i++) {

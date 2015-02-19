@@ -6,19 +6,19 @@
 //  Copyright (c) 2015 Sash Zats. All rights reserved.
 //
 
-#import "LeaksInspectorContext.h"
+#import "_LeaksInspectorContext.h"
 
-@implementation LeaksInspectorContext
+@implementation _LeaksInspectorContext
 
 + (instancetype)contextForEnumerationWithBlock:(leaks_inspector_enumeration_t)block {
-    LeaksInspectorContext *context = [LeaksInspectorContext new];
+    _LeaksInspectorContext *context = [_LeaksInspectorContext new];
     context->_block = block;
     context->_type = LeaksInspectorTypeEnumeration;
     return context;
 }
 
 + (instancetype)contextForAllResultsWithOptions:(NSPointerFunctionsOptions)options {
-    LeaksInspectorContext *context = [LeaksInspectorContext new];
+    _LeaksInspectorContext *context = [_LeaksInspectorContext new];
     context->_results = [[NSHashTable alloc] initWithOptions:options capacity:0];
     context->_type = LeaksInspectorTypeAllResults;
     return context;

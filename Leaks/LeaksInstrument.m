@@ -9,17 +9,12 @@
 #import "LeaksInstrument.h"
 
 #import "LeaksInspector.h"
-#import "LeaksInspectorContext.h"
+#import "_LeaksInspectorContext.h"
 #import "LeaksSession.h"
+#import "LeaksSession+Private.h"
 
 
-static const NSPointerFunctionsOptions options = NSPointerFunctionsStrongMemory | NSPointerFunctionsObjectPersonality;
-
-
-@interface LeaksSession ()
-@property (nonatomic) NSHashTable *leaks;
-@property (nonatomic) NSUInteger index;
-@end
+static const NSPointerFunctionsOptions options = NSPointerFunctionsWeakMemory | NSPointerFunctionsObjectPersonality;
 
 
 @interface LeaksInstrument ()
@@ -118,7 +113,7 @@ static const NSPointerFunctionsOptions options = NSPointerFunctionsStrongMemory 
     static NSSet *blacklistedClasses;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        blacklistedClasses = [NSSet setWithObjects:[LeaksInstrument class], [LeaksSession class], [LeaksInspector class], [LeaksInspectorContext class], nil];
+        blacklistedClasses = [NSSet setWithObjects:[LeaksInstrument class], [LeaksSession class], [LeaksInspector class], [_LeaksInspectorContext class], nil];
     });
 
     NSHashTable *result = [[NSHashTable alloc] initWithOptions:options capacity:0];
@@ -134,6 +129,12 @@ static const NSPointerFunctionsOptions options = NSPointerFunctionsStrongMemory 
     }];
     
     return result;
+}
+
+#pragma mark - NSObject
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<%@:%p {sessions=\n%@\n}>", [self class], self, [self.representativeSessions componentsJoinedByString:@"\n\t"]];
 }
 
 @end
